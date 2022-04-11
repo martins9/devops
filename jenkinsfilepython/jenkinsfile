@@ -9,6 +9,7 @@ pipeline {
         
         stage('Build'){
             steps{
+                sh 'chmod +x python-build.sh'
                 sh './python-build.sh'
             }
         }
