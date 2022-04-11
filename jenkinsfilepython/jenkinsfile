@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('Fetch code'){
             steps{
-                git credentialsId: 'BitBucket-Id', url: '${params.URL_BITBUCKET}'
+                git credentialsId: 'BitBucket-Id', url: '${params.URL_BITBUCKET}', branch: 'master'
             }
         }
         
