@@ -9,7 +9,7 @@ pipeline {
         
         stage('Build'){
             steps{
-                sh 'pyinstaller --onefile relatorio.py --name=relatorioLeite'
+                sh './python-build.sh'
             }
         }
     }
