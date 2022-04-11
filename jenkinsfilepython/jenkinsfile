@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('Fetch code'){
             steps{
-                git credentialsId: 'BitBucket-Id' branch: $BRANCH, url: $URL_BITBUCKET
+                git credentialsId: 'BitBucket-Id', url: '${params.URL_BITBUCKET}'
             }
         }
         
@@ -12,7 +12,5 @@ pipeline {
                 sh 'pyinstaller --onefile relatorio.py --name=relatorioLeite'
             }
         }
-
-
     }
 }
